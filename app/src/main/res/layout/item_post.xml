@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="Title"
+        app:layout_constraintTop_toTopOf="@+id/top"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"
+        app:layout_constraintBottom_toTopOf="@+id/postBody"/>
+
+    <TextView
+        android:id="@+id/postBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Body"
+        app:layout_constraintTop_toBottomOf="@+id/postTitle"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        app:layout_constraintRight_toRightOf="@+id/right"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="8dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="8dp"/>
+
+</android.support.constraint.ConstraintLayout>
